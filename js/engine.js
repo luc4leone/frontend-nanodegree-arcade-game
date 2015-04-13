@@ -108,12 +108,12 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/code04.png',   // Top row is water
+                'images/monitor-block.png',   // Row 1 of 3 of stone
+                'images/monitor-block.png',   // Row 2 of 3 of stone
+                'images/monitor-block.png',   // Row 3 of 3 of stone
+                'images/port-block.png',   // Row 1 of 2 of grass
+                'images/port-block.png'    // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -135,8 +135,6 @@ var Engine = (function(global) {
                 ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
             }
         }
-
-
         renderEntities();
     }
 
@@ -151,7 +149,6 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
-
         player.render();
     }
 
@@ -168,11 +165,14 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
-        'images/stone-block.png',
-        'images/water-block.png',
-        'images/grass-block.png',
-        'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/monitor-block.png',
+        'images/code04.png',
+        'images/port-block.png',
+        'images/geek1.png',
+        'images/bug.png',
+        'images/cameron.png',
+        'images/james.png',
+        'images/mike.png'
     ]);
     Resources.onReady(init);
 
