@@ -65,13 +65,14 @@ Player.prototype.render = function() {
 }
 
 // Now instantiate your objects.
-var enemy1 = new Enemy(-150, 134, 100, 'images/mike.png');
+var enemy1 = new Enemy(-500, 134, 100, 'images/mike.png');
 var enemy2 = new Enemy(-50, 217, 240, 'images/cameron.png');
-var enemy3 = new Enemy(-90, 301, 100, 'images/james.png');
-var enemy4 = new Enemy(-280, 301, 100, 'images/james.png');
+var enemy3 = new Enemy(-80, 301, 100, 'images/james.png');
+var enemy4 = new Enemy(-320, 301, 100, 'images/sarah.png');
+var enemy5 = new Enemy(-200, 134, 100, 'images/poornima.png');
 
 // Place all enemy objects in an array called allEnemies
-var allEnemies = [enemy1, enemy2, enemy3, enemy4];
+var allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5];
 
 // Place the player object in a variable called player
 var player = new Player(205, 384);
