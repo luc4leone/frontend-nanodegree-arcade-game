@@ -1,5 +1,5 @@
 // Enemies our player must avoid 
-var Enemy = function(x, y, speed, face) {
+var Enemy = function (x, y, speed, face) {
     // set the enemy image
     this.sprite = face;
     // set the enemy initial position
@@ -9,13 +9,13 @@ var Enemy = function(x, y, speed, face) {
     this.speed = speed;
 };
 
-var randomNumber = function() {
+var randomNumber = function () {
     return Math.floor((Math.random() * 200) + 50);
 };
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
-Enemy.prototype.update = function(dt) {
+Enemy.prototype.update = function (dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
@@ -26,12 +26,12 @@ Enemy.prototype.update = function(dt) {
 
     // update the enemy position
     this.x = this.x + this.speed * dt;
-}
+};
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 // Now write your own player class
 // This class requires an update(), render() and
@@ -47,8 +47,7 @@ Player.prototype.update = function(dt) {
     // update the player position
     checkCollisions();
     this.checkWater();
-}
-var game_over = false;
+};
 
 Player.prototype.handleInput = function(key){
    
@@ -65,13 +64,11 @@ Player.prototype.handleInput = function(key){
         } else {
             return false;
         }
-}
-
-
+};
 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 // Now instantiate your objects.
 var enemy1 = new Enemy(-500, 134, 100, 'images/mike.png');
@@ -91,11 +88,10 @@ var player = new Player(205, 384);
 Player.prototype.resetPosition = function() {
     this.x = 205;
     this.y = 384;
-}
+};
 
 Player.prototype.points = 0;
 Player.prototype.lives = 3;
-
 
 // if player achieve water reset position
 Player.prototype.checkWater = function() {
@@ -105,16 +101,18 @@ Player.prototype.checkWater = function() {
         
         setTimeout(function(){player.resetPosition()}, 500); 
     }
-}
+};
 
-
+// when player finishes his 3 lives it's over. the conditional
+// is the first statement in main()
 Player.prototype.gameOver = function() {
     document.getElementById("gameoverBanner").style.display = "block";
     player.x = 1000;
     player.y = 1000;    
-}
+};
 
-
+// reset points and lives and remove banner when player start a new 
+// game
 Player.prototype.restart = function(){
     this.resetPosition(); 
     this.points = 0;
@@ -122,9 +120,9 @@ Player.prototype.restart = function(){
     document.getElementById("score").innerHTML = this.points.toString();
     document.getElementById("lives").innerHTML = this.lives.toString();
     document.getElementById("gameoverBanner").style.display = "none";
-}
+};
 
-
+// whem player 'meet' enemies reset position, loses life
 function checkCollisions() {
     allEnemies.forEach(function(enemy) {
         if (enemy.x < player.x + 80 && 

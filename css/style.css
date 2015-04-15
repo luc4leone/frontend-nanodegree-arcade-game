@@ -1,15 +1,33 @@
 body {
-    text-align: center;
-    font-family: sans-serif;
-    color: #444;
+  text-align: center;
+  font-family: sans-serif;
+  color: #444;
 }
 
-h2 { margin-bottom: 8px; }
-span {color: #77BB40}
-h4 { margin: 0; } 
-h3 { margin-bottom: -10px; }
-p { margin-bottom: 0; }
-.instructions { color: #aaa; }
+h2 { 
+  margin-bottom: 8px; 
+}
+
+span {
+  color: #77BB40
+}
+
+h4 { 
+  margin: 0; 
+}
+
+h3 { 
+  margin-bottom: -10px;
+}
+
+p { 
+  margin-bottom: 0; 
+}
+
+.instructions { 
+  color: #aaa; 
+}
+
 #gameoverBanner {
   display: none;
   position: absolute;
@@ -28,4 +46,3 @@ p { margin-bottom: 0; }
   color: white;
   font-size: 56px;
 }
-
