@@ -5,7 +5,28 @@ body {
 }
 
 h2 { margin-bottom: 8px; }
+span {color: #77BB40}
 h4 { margin: 0; } 
 h3 { margin-bottom: -10px; }
 p { margin-bottom: 0; }
 .instructions { color: #aaa; }
+#gameoverBanner {
+  display: none;
+  position: absolute;
+  top:145px;
+  left:165px;
+  width: 505px;
+  height: 536px;
+  background-color: rgba(50%,50%,50%,0.38);
+}
+
+#gameoverBanner p {
+  margin-top: 200px;
+  color: white;
+  font-size: 56px;
+}
+
+#oki {
+  color: violet;
+  font-size: 20px;
+}

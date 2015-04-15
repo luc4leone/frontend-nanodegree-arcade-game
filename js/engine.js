@@ -33,6 +33,10 @@ var Engine = (function(global) {
      * and handles properly calling the update and render methods.
      */
     function main() {
+        // when player loses his 3 lives the game ends
+        if (player.lives === 0) {
+            player.gameOver();
+        }
         /* Get our time delta information which is required if your game
          * requires smooth animation. Because everyone's computer processes
          * instructions at different speeds we need a constant value that
@@ -174,7 +178,8 @@ var Engine = (function(global) {
         'images/james.png',
         'images/mike.png',
         'images/sarah.png',
-        'images/poornima.png'
+        'images/poornima.png',
+        'images/jessica.png'
     ]);
     Resources.onReady(init);
 
