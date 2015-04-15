@@ -14,10 +14,13 @@ p { margin-bottom: 0; }
   display: none;
   position: absolute;
   top:145px;
-  left:165px;
+  left:50%;
+  right:50%;
+  margin-left: -252px;
   width: 505px;
   height: 536px;
   background-color: rgba(50%,50%,50%,0.38);
+  z-index: 100;
 }
 
 #gameoverBanner p {
@@ -26,7 +29,3 @@ p { margin-bottom: 0; }
   font-size: 56px;
 }
 
-#oki {
-  color: violet;
-  font-size: 20px;
-}
