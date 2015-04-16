@@ -1,7 +1,7 @@
-frontend-nanodegree-arcade-game
+Arcade game (revisited)
 ===============================
 
-## Arcade game (revisited)
+# Introduction
 
 This is the third project in the Udacity Frontend Nanodegree. It's a javascript game. I'm a designer, so I decided to *change the metaphor game* to suit my users, the Udacity teachers: instead of a player against bugs, I have a code bug against programmes.
 
